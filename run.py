@@ -25,7 +25,7 @@ def make_shell_context():
 manager.add_command('Shell', Shell(make_context=make_shell_context))
 manager.add_command('db', MigrateCommand)
 
-@manager.command()
+@manager.command
 def deploy():
     from flask_migrate import upgrade
     upgrade()
