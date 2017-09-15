@@ -28,9 +28,9 @@ manager.add_command('db', MigrateCommand)
 @manager.command
 def deploy():
     db.create_all()
-    print 'please input admin's email:'
+    print "please input admin's email:"
     email=raw_input()
-    print 'please input admin's password:'
+    print "please input admin's password:"
     password=raw_input()
     User.insert_admin(email=123456@qq.com,password=123456)
     FriendUrl.insert_url()
