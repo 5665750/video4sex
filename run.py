@@ -33,7 +33,7 @@ def deploy():
     email=raw_input()
     print "please input admin's password:"
     password=raw_input()
-    User.insert_admin(email=123456@qq.com,password=123456)
+    User.insert_admin(email=email,password=password)
     FriendUrl.insert_url()
 
 
