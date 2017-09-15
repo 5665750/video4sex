@@ -27,6 +27,7 @@ manager.add_command('db', MigrateCommand)
 
 @manager.command
 def deploy():
+    db.drop_all()
     db.create_all()
     print "please input admin's email:"
     email=raw_input()
