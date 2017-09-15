@@ -41,7 +41,7 @@
 4. 初始化数据。在video4sex目录下运行
     - `python run.py deploy`
 5. 初始化视频数据。
-    -  `python fahai.py`
+    -  ~~`python fahai.py`~~ 该脚本没用了。
 6. 初始化草榴数据。
     - `python cl1024.py`
 # 运行网站
