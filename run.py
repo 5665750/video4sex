@@ -27,9 +27,12 @@ manager.add_command('db', MigrateCommand)
 
 @manager.command
 def deploy():
-    from flask_migrate import upgrade
-    upgrade()
-    User.insert_admin(email='yourmail',password='yourpassword')
+    db.create_all()
+    print 'please input admin's email:'
+    email=raw_input()
+    print 'please input admin's password:'
+    password=raw_input()
+    User.insert_admin(email=123456@qq.com,password=123456)
     FriendUrl.insert_url()
 
 
