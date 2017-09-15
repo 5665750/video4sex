@@ -200,7 +200,7 @@ class FriendUrl(db.Model):
 
     @staticmethod
     def insert_url():
-        url=Friend(order=1,url='http://www.video4sex.com',name='video4sex',isvalid=True,isok=True)
+        url=FriendUrl(order=1,url='http://www.video4sex.com',name='video4sex',isvalid=True,isok=True)
         db.session.add(url)
         db.session.commit()
 
