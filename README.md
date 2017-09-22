@@ -46,7 +46,8 @@
     - `python cl1024.py`
 # 运行网站
 - 假设你之前已经安装好nginx了，将`nginx.conf`里面的配置信息添加到你的nginx配置信息中，并在`server_name`后面添加你的域名，其他信息别改动。
-- 在video4sex目录下输入`online_debug`，如果没有报错，继续在浏览器打开`http://你的ip:5432`，看是否有信息
+
+- 在video4sex目录下输入`online_debug`或者`gunicorn -w4 -b 0.0.0.0:5432 run:app`，如果没有报错，继续在浏览器打开`http://你的ip:5432`，看是否有信息
 ## 不会安装？不会python？
 付费安装，联系video4sexroot@gmail.com。
 ## 为什么没有openload上传脚本？
