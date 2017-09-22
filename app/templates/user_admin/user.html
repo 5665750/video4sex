@@ -11,7 +11,7 @@
     {%for post in posts%}
         <article class="excerpt">
           <p class="image-container" >
-             <a class="focus" href="/online/play?vid={{post.encode_id}}" target="_blank"><img src="{%if post.post.flag=='hdr'%}{{post.post.picture}}{%else%}{{post.post.zhan}}/{{post.post.picture}}{%endif%}"  class="thumb"></a>
+             <a class="focus" href="/online/play?vid={{post.encode_id}}" target="_blank"><img src="{{post.post.picture}}"  class="thumb"></a>
           </p>
           <header>
              <a class="cat" href="/online/play?vid={{post.encode_id}}" target="_blank">{{post.post.title[:5]|safe}}<i></i></a>
