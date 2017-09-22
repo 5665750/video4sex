@@ -12,8 +12,8 @@
 - config.py - 配置信息
 - supervisord.conf - supervisor启动文件
 - app文件夹 - 系统文件夹
-- logs文件夹 - 储存log信息
-- fahai.py - 视频爬虫脚本
+- logs文件夹 - 储存log信息(git没有上传，需自己重建)
+- ttc.py - 视频爬虫脚本
 - cl1024.py - 草榴爬虫脚本
 # 安装前准备：
 1. 安装nginx、mysql、supervisor，crontab
