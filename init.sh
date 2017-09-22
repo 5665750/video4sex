@@ -29,6 +29,7 @@ function add_alias(){
     echo "alias online_start='supervisorctl -c /root/video4sex/supervisord.conf start online'" >> ~/.bashrc
     echo "alias online_status='supervisorctl -c /root/video4sex/supervisord.conf status'" >> ~/.bashrc
     echo "alias online_stop='supervisorctl -c /root/video4sex/supervisord.conf stop online'" >> ~/.bashrc
+    echo "alias online_debug='gunicorn -w4 -b 0.0.0.0:5432 run:app'" >> ~/.bashrc
     source ~/.bashrc
 }
 
