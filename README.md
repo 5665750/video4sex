@@ -36,8 +36,8 @@
 2. 修改文件`config.py`
     - 将`SQLALCHEMY_DATABASE_URI`这一行中的`password`修改为你自己的密码
     - 同时将`MAIL_USERNAME`和`MAIL_PASSWORD`修改为你自己的gmail账号和密码（用于发送重置密码邮件）
-3. 修改文件`run.py`
-    - 将#37行的email和password修改为你自己的邮箱和密码，用户名最好别改
+3. 创建一个**logs**文件夹
+    - 在网站根目录下创建**logs**文件夹
 4. 初始化数据。在video4sex目录下运行
     - `python run.py deploy`
 5. 初始化视频数据。
