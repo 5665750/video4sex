@@ -194,38 +194,6 @@ def playon():
     rand = random.choice(rand)
     info = '明天'
     Post.add_times(db, vid)
-    mp4_reg = re.compile(
-        '<source src="(.*?)" type="video/mp4" label="360p" res="360"')
-    if mp4_url.flag in ('fahai', 'hdr'):
-        mp4_url = mp4_url
-    elif mp4_url.openload_url is not None and mp4_url.openload_expired < datetime.datetime.now():
-        mp4_url = mp4_url
-        mp4_url.openload_expired = datetime.datetime.now() + datetime.timedelta(days=60)
-        db.session.add(mp4_url)
-        db.session.commit()
-    else:
-        logger.info('checking ' + mp4_url.flag + ' ' + mp4_url.id)
-        if test(mp4_url.video) == 'ok':
-            mp4_url = Post.query.filter_by(encode=vid).first()
-            logger.info(str(mp4_url.flag) + ' ' + str(mp4_url.id) + ' is ok~')
-        else:
-            mp4_url = Post.query.filter_by(encode=vid).first()
-            logger.info(str(mp4_url.flag) + ' ' +
-                        str(mp4_url.id) + ' is fail !')
-            mp4url = mp4_url.zhan + '/' + str(mp4_url.id)
-            logger.info('the web :' + mp4url)
-            try:
-                cont = requests.get(mp4url, headers=headers).content
-                mp4 = mp4_reg.findall(cont)
-                mp4 = mp4[0]
-                mp4_url.video = mp4
-                db.session.add(mp4_url)
-                db.session.commit()
-                mp4_url = Post.query.filter_by(encode=vid).first()
-            except Exception, e:
-                logger.info(e)
-                flash("无法打开")
-                return redirect(url_for('online.index'))
     return render_template('online/play.html', url=mp4_url, rand=rand, info=info, count=count, vid=vid, form=form, comments=comments)
 
 
